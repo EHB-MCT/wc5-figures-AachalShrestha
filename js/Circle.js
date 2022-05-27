@@ -8,6 +8,10 @@ export default class Circle extends Figure {
         this._radius = radius;
     }
 
+    get radius() {
+        return this._radius;
+    }
+
     get diameter() {
         return this._radius * 2;
     }
@@ -20,11 +24,13 @@ export default class Circle extends Figure {
         return 2 * Math.PI * this._radius;
     }
 
+
     get htmlString() {
         return `<div class="result">
   <div class="figure circle" style="width: ${this.diameter}px; height: ${this.diameter}px;"></div>
   <div class="infoBox">
     <h3>Circle</h3>
+    <h3>DOCTOR STRANGE SHIT</h3>
     <dl>
       <dt>Radius</dt>
       <dd>${this._radius}</dd>
@@ -40,6 +46,10 @@ export default class Circle extends Figure {
     </dl>
   </div>
 </div>`;
+    }
+
+    set radius(radius) {
+        this._radius = radius;
     }
 
 }
